@@ -16,6 +16,8 @@ namespace MiAPO_Lab3
             Console.Clear();
 
             Console.WriteLine("Объем куба равен " + Math.Pow(A, 3) + " кубических сантиметров.");
+
+            Console.WriteLine("Площадь поверхности куба равно " + 6 * Math.Pow(A, 2) + " квадратных сантиметров.");
             Console.ReadLine();
         }
     }
