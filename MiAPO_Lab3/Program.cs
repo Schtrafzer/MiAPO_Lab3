@@ -10,44 +10,15 @@ namespace MiAPO_Lab3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите номер фигуры, для которой нужно рассчитать объем:");
-            Console.WriteLine("1 - Куб");
-            Console.WriteLine("2 - Шар");
-            Console.WriteLine("3 - Цилиндр");
-            Console.WriteLine("4 - Конус");
-            Console.WriteLine("5 - Пирамида");
+            Console.WriteLine("Введите длинну ребра куба в сантиметрах:");
+            double A = Convert.ToDouble(Console.ReadLine());
 
-            Geometry Volume_calculation = new Geometry();
-            int Task_number = Convert.ToInt32(Console.ReadLine());
-            switch (Task_number)
-            {
-                case 1:
-                    Console.Clear();
-                    Volume_calculation.Cybe();
-                    break;
-                case 2:
-                    Console.Clear();
-                    Volume_calculation.Ball();
-                    break;
-                case 3:
-                    Console.Clear();
-                    Volume_calculation.Cylinder();
-                    break;
-                case 4:
-                    Console.Clear();
-                    Volume_calculation.Cone();
-                    break;
-                case 5:
-                    Console.Clear();
-                    Volume_calculation.Pyramid();
-                    break;
-                default:
-                    Console.WriteLine("Такого номера фигуры не существует.");
-                    break;
-            }
+            Console.Clear();
 
+            Console.WriteLine("Объем куба равен " + Math.Pow(A, 3) + " кубических сантиметров.");
+
+            Console.WriteLine("Площадь поверхности куба равно " + 6 * Math.Pow(A, 2) + " квадратных сантиметров.");
             Console.ReadLine();
         }
-
     }
 }
