@@ -15,6 +15,7 @@ namespace MiAPO_Lab3
 
         static void Control()
         {
+            
             Console.Clear();
 
             Console.WriteLine("Поиск объемов фигур.");
@@ -25,6 +26,8 @@ namespace MiAPO_Lab3
             Console.WriteLine("2. Шар");
             Console.WriteLine("3. Цилиндр");
             Console.WriteLine("4. Конус");
+            Console.WriteLine("5. Пирамида");
+
             Console.WriteLine();
 
             Console.Write("Введите номер фигуры, для который будет подсчитан объем: ");
@@ -46,6 +49,9 @@ namespace MiAPO_Lab3
                 case 4:
                     Cone();
                     break;
+                case 5:
+                    Pyramid();
+                    break;               
             }
 
             Console.Clear();
@@ -127,6 +133,25 @@ namespace MiAPO_Lab3
 
             Console.ReadLine();
         }
+        static void Pyramid()
+        {
+        Console.Write("Введите высоту пирамиды: ");
+        double H = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine();
 
+        Console.Write("Введите длинну основания пирамиды: ");
+        double A = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine();
+
+        Console.Write("Введите ширину основания пирамиды: ");
+        double B = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine();
+
+        double Volume = ((A * B) * H) / 3;
+        Console.WriteLine("Объем пирамиды равен ~" + Math.Round(Volume) + " см^2");
+
+        Console.ReadLine();
+        }
+        
     }
 }
